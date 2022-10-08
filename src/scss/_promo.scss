@@ -1,0 +1,204 @@
+.promo {
+  height: 105vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* &__btn { */
+  /*   @include btn; */
+  /* } */
+  .mobile {
+    display: none;
+  }
+  &__text {
+      font-size: clamp(0.8rem, 1.3vw, 1.2rem);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding-block: 5vh;
+  }
+  &__video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105vh;
+    object-fit: cover;
+    z-index: 1;
+  }
+  &__effects {
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105vh;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.45);
+  }
+  &__title {
+    position: relative;
+    z-index: 3;
+    text-transform: uppercase;
+    span {
+      position: relative;
+    }
+    span::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: url('../img/level-up.png') center / cover no-repeat;
+      top: 0;
+      right: 100%;
+      z-index: 10;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-height: 70%;
+
+    img {
+      filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.7));
+      width: 30%;
+      max-height: 60vh;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    display: block;
+    font-size: 5rem;
+    font-weight: 900;
+    color: $fontWhite;
+    letter-spacing: 5px;
+  }
+  &__info {
+    display: flex;
+    max-width: 50%;
+    gap: clamp(0.4rem, 1vh, 2rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1em;
+
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vh, 2rem);
+    p {
+      padding-top: clamp(0.6em, 1.8vw, 0.8em);
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .promo {
+    &__info {
+      @include element-style;
+    }
+    &__subtitle {
+      display: none;
+    }
+    .mobile-nav {
+      display: block;
+       width: 100%;
+      align-self: start;
+      &__trigger {
+        cursor: pointer;
+      }
+      &__tabs {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        &.slide-1{
+          &::after {
+            left: 50%;
+          }
+        }
+        &.slide-2{
+          &::after {
+            left: 83.5%;
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100px;
+          top: 0;
+          left: 16.5%;
+          transform: translateX(-50%);
+          color: $fontLight;
+          border-radius:3rem;
+          box-shadow: rgba(36, 65, 93, 0.3) 0px 0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px,
+            inset rgba(36, 65, 93, 0.3) 4px 4px 8px, inset rgba(255, 255, 255, 1) -4px -4px 10px;
+          border: 0px rgba(225, 226, 232, 0) solid;
+          transition: all 0.1s ease-in-out 0s;
+        }
+        li {
+          padding: 0.4em;
+          flex: 1 1 33.3%;
+          text-align: center;
+        }
+      }
+    }
+    &__container {
+    justify-content: space-evenly;
+    }
+    &__content {
+      flex-direction: column;
+      justify-content: end;
+      height: 100%;
+      max-height: 80vh;
+      position: relative;
+      gap: 2rem;
+      text-align: justify;
+      h3 {
+        text-align: center;
+        &::before {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 30%;
+        }
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+      }
+    }
+    &__info {
+      width: 100%;
+      max-width: 400px;
+      z-index: 999;
+      min-height: 30%;
+      justify-content: start;
+    }
+    .btn {
+      margin-block:1.5rem!important;
+    }
+  }
+}
+
+.-logo {
+  position: relative;
+  z-index: 999999999999999;
+  width: 90%;
+  img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+  }
+}

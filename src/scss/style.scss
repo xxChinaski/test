@@ -1,0 +1,77 @@
+// styles
+@import "_null";
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+@import "_animation";
+@import "_ui";
+
+.leader-line {
+  z-index: 9;
+  /* position: relative !important;  */
+}
+
+body {
+  font-family: "Roboto";
+  /* font-family: "SFNS Display"; */
+  /* font-family: "Poppins"; */
+  font-size: 1.1rem;
+  line-height: 135%;
+  color: $fontDark;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: clip;
+  &.-scroll-disabled {
+    overflow: hidden;
+  }
+}
+a {
+  color: $accentOrange;
+}
+li a {
+  color: $fontMain;
+  &:hover {
+    color: $accentOrange;
+  }
+}
+.section {
+  height: 100vh;
+  overflow: hidden;
+  background-color: $bgRight;
+  z-index: 9;
+  position: relative;
+}
+// ----------MAIN---------------
+.main {
+  @import "_preloader";
+  @import "_promo";
+  @import "_composition";
+  @import "_swiper";
+  @import "_doctor";
+  @import "_order";
+  margin-bottom: -40px;
+}
+// ----------MAIN END---------------
+
+// ----------FOOTER ---------------
+.footer {
+  position: relative;
+  z-index: 9999999;
+  height: 30px;
+  &__copy {
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+    padding-block: 10px;
+    gap: 5px;
+    color: $bgRight;
+    font-size: 0.8rem;
+    a {
+      color: $bgLeft;
+    }
+  }
+}
+
+

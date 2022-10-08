@@ -1,0 +1,279 @@
+@import "_animation";
+.order {
+  background-color: transparent !important;
+  border-radius: 2rem 2rem 0 0;
+  padding-block: calc(5vh + 50px) max(50px, 2.5vh);
+  min-height: 105vh;
+  height: initial;
+  display: flex !important;
+  align-items: start;
+  &__container {
+    /* width: 100%; */
+    flex: 1 1 100%;
+    /* height: 100%; */
+  }
+  &__content {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% repeat(3, 1fr);
+    grid-template-rows: 10vh 10vh repeat(4, 1fr);
+    background: $bgRight;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: $fontLight 0px -5px 125px;
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    column-gap: 2rem;
+  }
+  &__logo {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    position: relative;
+    z-index: 3;
+    text-transform: uppercase;
+    display: block;
+    font-size: 5rem;
+    font-weight: 900;
+    color: $fontWhite;
+    letter-spacing: 5px;
+    margin-inline: auto;
+    max-height: 80px;
+    img {
+      height: 100%;
+    }
+  }
+  &__timer {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    place-self: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-block: 1rem;
+
+  }
+  &__card {
+    grid-column: 1 / 2;
+    grid-row: 3 / -1;
+    @include element-style;
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+    gap: 5rem;
+    overflow: hidden;
+  }
+  &__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    flex: 1 1 90%;
+    min-height: 60vh;
+    &-old {
+      /* @include element-style; */
+    color: $fontLight;
+    box-shadow: rgba(36, 65, 93, 0.3) 2px 2px 5px, rgba(255, 255, 255, 1) -2px -2px 5px,
+      inset rgba(36, 65, 93, 0.3) 0px 0px 0px, inset rgba(255, 255, 255, 1) -0px -0px 0px;
+    border: 0px rgba(225, 226, 232, 0) solid;
+    transition: all 0.1s ease-in-out 0s;
+    border-radius: 1rem;
+      position: relative;
+      overflow: hidden;
+      /* width: 150px; */
+      max-width: 150px;
+      display: flex;
+      padding: 0.1em 0.6em;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 8px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: 80%;
+        background-color:rgba(39, 56, 80, 0.4) ;
+      }
+    }
+    &-new {
+      @include element-style;
+      text-align: center;
+      width: 50vw;
+      padding-block: 0!important;
+      padding-inline: 0!important;
+      justify-content: stretch;
+      .heartbeat {
+        margin-left: auto;
+        font-size: 4rem;
+        line-height: 120%;
+        font-weight: 900;
+      }
+    }
+  }
+  &__form {
+    grid-column: 2 / -1;
+    grid-row: 3 / -1;
+    /* margin: 50px; */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    input {
+      background-color: transparent;
+      border-radius: 1rem;
+      font-size: clamp(15px, 1.4vw, 20px);
+      padding-inline: 1em;
+      padding-block: 0.8em;
+      color: $fontDark;
+      box-shadow: rgba(36, 65, 93, 0.3) 0px 0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px,
+        inset rgba(36, 65, 93, 0.3) 4px 4px 8px, inset rgba(255, 255, 255, 1) -4px -4px 10px;
+    }
+  }
+  .form {
+    @include element-style;
+    width: 100%;
+    justify-content: space-around;
+    & > * {
+      flex: 0 0 auto;
+    }
+    &__content {
+      padding-block: 1em;
+    }
+    &-btn {
+      margin-inline: auto;
+      margin-block: 0.5em;
+      font-size: clamp(16px, 1.5vw, 32px);
+      align-self: end;
+      @include  btn;
+    }
+    &__upper {
+      display: flex;
+      justify-content: space-between;
+      /* font-size: clamp(10px, 1.2vw, 20px); */
+      flex: 1 1 50%;
+      gap: 2rem;
+      flex: 1 1 auto;
+    }
+    input::placeholder {
+      color: $fontLight;
+    }
+    &__title {
+      font-family: Sofia;
+      font-size: 1.4rem;
+      position: relative;
+      text-align: center;
+      margin-bottom:  1rem;
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 25%;
+        height: 1px;
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $fontDark;
+      }
+    }
+    &-element {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      padding-block: 0.5em;
+      &__title {
+        margin-bottom: 0.2em;
+        border-radius: 0.5em !important;
+        font-size: clamp(10px, 1.2vw, 20px);
+      }
+      &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 1.5em;
+      }
+      &__tip {
+        opacity: 0;
+        color: darkred;
+        transition: all 0.2s ease-in-out 0s;
+        &.-show {
+          opacity: 1;
+          transition: all 0.2s ease-in-out 0s;
+        }
+      }
+    }
+  }
+  &__photo {
+    position: absolute;
+    inset: 15px 15px 15px 15px;
+    /* background: url('../img/jar1.png') center / contain no-repeat; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img { 
+      filter: drop-shadow(5px 5px 30px rgba(36, 65, 93, 0.8));
+      object-fit: cover;
+      width: 80%;
+      height: 80%;
+    }
+  }
+}
+
+.heartbeat {
+	-webkit-animation: heartbeat 2s ease-in-out infinite both;
+	        animation: heartbeat 2s ease-in-out infinite both;
+}
+
+@media (max-width: 997.98px) {
+  .order {
+    &__content {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center;
+    }
+    &__card {
+      border-radius: 1rem 1rem 0 0 !important;
+      color: $fontLight;
+      box-shadow: rgba(36, 65, 93, 0.3) 0px 0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px,
+        inset rgba(36, 65, 93, 0.3) 4px 4px 8px, inset rgba(255, 255, 255, 1) -4px -4px 10px;
+      border: 0px rgba(225, 226, 232, 0) solid;
+      transition: all 0.1s ease-in-out 0s;
+      height: 30vh;
+      flex-direction: row;
+      gap: 5vw !important;
+      width: 100%;
+    }
+    &__photo {
+      inset: initial;
+      position: relative;
+      width: 60vw;
+      z-index: 99999;
+      flex: 1 0 40%;
+      height: 100%;
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+    &__price {
+      flex: 1 1 calc(60% - 5vw) !important;
+      min-height: initial;
+      &-new {
+        width: 100%;
+        padding-inline: 1rem;
+      }
+    }
+
+  }
+  .form {
+      border-radius: 0 0 1rem 1rem !important;
+    &__upper {
+      flex-direction: column;
+      gap: 0 !important;
+    }
+  }
+}

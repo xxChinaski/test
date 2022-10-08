@@ -1,0 +1,66 @@
+@mixin element-style {
+  z-index: 10;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  color: $fontDark;
+  padding-block: calc(clamp(0.6em, 1.8vw, 0.8em) + 1px);
+  padding-inline: calc(clamp(1em, 3vw, 1.5em) + 1px);
+  background: linear-gradient(-35deg, $bgLeft -40%, $bgRight 150%);
+  /* box-shadow: rgba(36, 65, 93, 0.3) 3px 3px 20px, rgba(255, 255, 255, 1) -4px -4px 20px, rgba(255, 255, 255, 1) -4px -4px 20px; */
+  box-shadow: rgba(36, 65, 93, 0.3) 3px 3px 20px, rgba(255, 255, 255, 1) -4px -4px 20px;
+  border: 1px rgba(255, 255, 255, 0.2) solid;
+  h3 {
+    font-size: 1.2rem;
+    font-family: "Rubik";
+    letter-spacing: 1px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 40%;
+      height: 1px;
+      bottom: -25%;
+      background-color: $fontDark;
+    }
+  }
+  /* p { */
+  /*   margin-block: clamp(1rem, 2vh, 2rem); */
+  /* } */
+}
+
+@mixin btn {
+  z-index: 10;
+  border-radius: 0.8rem;
+  font-family: Sofia;
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $fontDark;
+  padding-block: calc(clamp(0.6em, 1.8vw, 0.8em) + 1px);
+  padding-inline: calc(clamp(1em, 3vw, 1.5em) + 1px);
+  background: linear-gradient(-35deg, $bgLeft -40%, $bgRight 150%);
+  box-shadow: rgba(36, 65, 93, 0.3) 3px 3px 20px, rgba(255, 255, 255, 1) -4px -4px 20px, rgba(255, 255, 255, 1) -4px -4px 20px,
+    inset rgba(36, 65, 93, 0.0) 0px 0px 0px, inset rgba(255, 255, 255, 0) -0px -0px 0px;
+  border: 1px rgba(255, 255, 255, 0.2) solid;
+  transition: all 0.1s ease-in-out 0s;
+  &:hover {
+    color: $fontLight;
+    box-shadow: rgba(36, 65, 93, 0.3) 2px 2px 5px, rgba(255, 255, 255, 1) -2px -2px 5px,
+      inset rgba(36, 65, 93, 0.3) 0px 0px 0px, inset rgba(255, 255, 255, 1) -0px -0px 0px;
+    border: 0px rgba(225, 226, 232, 0) solid;
+    transition: all 0.1s ease-in-out 0s;
+  }
+  &:active {
+    color: $fontLight;
+    box-shadow: rgba(36, 65, 93, 0.3) 0px 0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px,
+      inset rgba(36, 65, 93, 0.3) 4px 4px 8px, inset rgba(255, 255, 255, 1) -4px -4px 10px;
+    border: 0px rgba(225, 226, 232, 0) solid;
+    transition: all 0.1s ease-in-out 0s;
+  }
+}

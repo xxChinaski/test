@@ -1,0 +1,65 @@
+.container {
+  max-width: 1440px;
+  height: 100%;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.btn {
+  z-index: 100;
+  position: relative;
+  border-radius: 0.8rem;
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $fontDark;
+  padding-block: calc(clamp(0.6em, 1.8vw, 0.8em) + 1px);
+  padding-inline: calc(clamp(1em, 3vw, 1.5em) + 1px);
+  background: linear-gradient(-35deg, $bgLeft -40%, $bgRight 150%);
+  box-shadow: rgba(36, 65, 93, 0.3) 3px 3px 20px, rgba(255, 255, 255, 1) -2px -2px 12px,
+    inset rgba(36, 65, 93, 0.0) 0px 0px 0px, inset rgba(255, 255, 255, 0) -0px -0px 0px;
+  border: 1px rgba(255, 255, 255, 0.2) solid;
+  transition: all 0.1s ease-in-out 0s;
+  &:hover {
+    color: rgba(230, 90, 60, 0.9);
+    box-shadow: rgba(36, 65, 93, 0.3) 0px 0px 0px, rgba(255, 255, 255, 1) -0px -0px 0px,
+      inset rgba(36, 65, 93, 0.3) 4px 4px 8px, inset rgba(255, 255, 255, 1) -4px -4px 10px;
+    border: 0px rgba(225, 226, 232, 0) solid;
+    transition: all 0.1s ease-in-out 0s;
+  }
+}
+
+@media (min-width: 767.98px) {
+li {
+  z-index: 10;
+  border-radius: 0.8rem;
+  font-size: clamp(0.8rem, 2vw, 1.3rem);
+  color: $fontDark;
+  padding-block: clamp(0.5em, 0.8vw, 0.8em);
+  padding-inline: clamp(1em, 3vw, 1.5em);
+  background: linear-gradient(-35deg, $bgLeft -40%, $bgRight 150%);
+  box-shadow: rgba(36, 65, 93, 0.3) 3px 3px 20px, rgba(255, 255, 255, 0.8) -2px -2px 12px;
+  border: 1px rgba(255, 255, 255, 0.4) solid;
+  h3 {
+    font-family: "Sofia";
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 40%;
+      height: 1px;
+      bottom: -15%;
+      background-color: $fontDark;
+    }
+  }
+}
+
+}

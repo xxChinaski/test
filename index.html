@@ -24,7 +24,9 @@
     <video src="img/waves.mp4" type="video/mp4" autoplay muted loop class="promo__video"></video>
     <div class="promo__effects"></div>
     <div class="promo__container container">
-      <h1 class="promo__title title">Level <span>P</span></h1>
+      <div class="promo__logo -logo">
+        <img src="img/logo.png" alt="" class="promo__logo-image">
+      </div>
       <div class="promo__content">
         <img src="img/jar1.png" alt="LevelUp image" class="promo__photo">
         <div class="promo__info">
@@ -56,7 +58,7 @@
           </ul>
         </div>
       </div>
-      <a href="#" class="promo_btn btn">Order</a>
+      <a href="#" class="promo__btn btn">Order</a>
     </div>
   </section>
   <section class="composition-seciton section composition">
@@ -152,30 +154,28 @@
   <section class="doctor-section section doctor">
     <div class="doctor__container container">
       <div class="doctor__content">
-        <div class="doctor__upper">
-          <div class="doctor__photo"><img src="img/doctor.png" alt="" class="doctor__image"></div>
-          <div class="doctor__text">
-            <div class="doctor__info">
-              <h4 class="doctor__title title">Doctor recommends!</h4>
-              <p><span></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi enim labore magnam illum,
-                eaque amet
-                minus ad est eum. Ducimus a at illum consequatur officia culpa ad cupiditate, facere voluptates iure,
-                facilis dicta labore molestiae et, architecto doloremque animi autem quisquam iste deserunt. Deserunt,
-                nihil. Repudiandae nobis deserunt quibusdam illum.</p>
-              <p><span></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi enim labore magnam illum,
-                eaque amet
-                minus ad est eum. Ducimus a at illum consequatur officia culpa ad cupiditate, facere voluptates iure,
-                facilis dicta labore molestiae et, architecto doloremque animi autem quisquam iste deserunt. Deserunt,
-                nihil. Repudiandae nobis deserunt quibusdam illum.</p>
-              <p><span></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi enim labore magnam illum,
-                eaque amet
-                minus ad est eum. Ducimus a at illum consequatur officia culpa ad cupiditate, facere voluptates iure,
-                facilis dicta labore molestiae et, architecto doloremque animi autem quisquam iste deserunt. Deserunt,
-                nihil. Repudiandae nobis deserunt quibusdam illum.</p>
-            </div>
-            <a href="#" class="doctor__btn btn">Order</a>
+        <div class="doctor__text">
+          <div class="doctor__info">
+            <h4 class="doctor__title title">Doctor recommends!</h4>
+            <p><span></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi enim labore magnam illum,
+              eaque amet
+              minus ad est eum. Ducimus a at illum consequatur officia culpa ad cupiditate, facere voluptates iure,
+              facilis dicta labore molestiae et, architecto doloremque animi autem quisquam iste deserunt. Deserunt,
+              nihil. Repudiandae nobis deserunt quibusdam illum.</p>
+            <p><span></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi enim labore magnam illum,
+              eaque amet
+              minus ad est eum. Ducimus a at illum consequatur officia culpa ad cupiditate, facere voluptates iure,
+              facilis dicta labore molestiae et, architecto doloremque animi autem quisquam iste deserunt. Deserunt,
+              nihil. Repudiandae nobis deserunt quibusdam illum.</p>
+            <p><span></span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi enim labore magnam illum,
+              eaque amet
+              minus ad est eum. Ducimus a at illum consequatur officia culpa ad cupiditate, facere voluptates iure,
+              facilis dicta labore molestiae et, architecto doloremque animi autem quisquam iste deserunt. Deserunt,
+              nihil. Repudiandae nobis deserunt quibusdam illum.</p>
           </div>
+          <a href="#" class="doctor__btn btn">Order</a>
         </div>
+        <div class="doctor__photo"><img src="img/doctor1.png" alt="" class="doctor__image"></div>
         <ul class="doctor__list">
           <li class="doctor__item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum similique dolorem
             nesciunt aspernatur neque veritatis iusto officiis vero accusamus itaque.</li>
@@ -190,12 +190,16 @@
   <section class="order-section section order">
     <div class="order__container container">
       <div class="order__content">
-        <h2 class="order__title title">Level <span></span>P</h2>
+        <div class="order__logo -logo">
+          <img src="img/logo.png" alt="" class="order__logo-image -logo-image">
+        </div>
         <div class="order__timer">
           <p>Time left: <span>30:00</span></p>
         </div>
         <div class="order__card">
+          <!-- <div class="order__photo"></div> -->
           <div class="order__photo">
+            <img src="img/jar1.png" alt="">
           </div>
           <div class="order__price">
             <div class="order__price-old">
@@ -209,36 +213,38 @@
           </div>
         </div>
         <form action="#" class="order__form form">
-          <p class="form__title ">Please fill out the form</p>
-          <div class="form__upper">
-            <div class="form__element form-element">
-              <div class="form-element__text">
-                <p class="form-element__title">First Name :</p>
-                <p class="form-element__tip">Tip: John</p>
+          <div class="form__content">
+            <p class="form__title ">Please fill out the form</p>
+            <div class="form__upper">
+              <div class="form__element form-element">
+                <div class="form-element__text">
+                  <p class="form-element__title">First Name :</p>
+                  <p class="form-element__tip">Tip: John</p>
+                </div>
+                <input placeholder="First name" type="text" class="order__name">
               </div>
-              <input placeholder="First name" type="text" class="order__name">
-            </div>
-            <div class="form__element form-element">
-              <div class="form-element__text">
-                <p class="form-element__title">Last Name :</p>
-                <p class="form-element__tip">Tip: Jameson</p>
+              <div class="form__element form-element">
+                <div class="form-element__text">
+                  <p class="form-element__title">Last Name :</p>
+                  <p class="form-element__tip">Tip: Jameson</p>
+                </div>
+                <input placeholder="Last name" type="text" class="order__name">
               </div>
-              <input placeholder="Last name" type="text" class="order__name">
             </div>
-          </div>
-          <div class="form__element form-element">
-            <div class="form-element__text">
-              <p class="form-element__title">Email Address :</p>
-              <p class="form-element__tip">Tip: example@gmail.com</p>
+            <div class="form__element form-element -out">
+              <div class="form-element__text">
+                <p class="form-element__title">Email Address :</p>
+                <p class="form-element__tip">Tip: example@gmail.com</p>
+              </div>
+              <input placeholder="Email" type="email" class="order__mail">
             </div>
-            <input placeholder="Email" type="email" class="order__mail">
-          </div>
-          <div class="form__element form-element">
-            <div class="form-element__text">
-              <p class="form-element__title">Phone Number :</p>
-              <p class="form-element__tip">Tip: 8-800-555-35-35</p>
+            <div class="form__element form-element -out">
+              <div class="form-element__text">
+                <p class="form-element__title">Phone Number :</p>
+                <p class="form-element__tip">Tip: 8-800-555-35-35</p>
+              </div>
+              <input placeholder="Phone number" type="tel" class="order__phone">
             </div>
-            <input placeholder="Phone number" type="tel" class="order__phone">
           </div>
           <button type="submit" class="btn form-btn">Accept</button>
         </form>
